@@ -75,6 +75,7 @@
     color:#ff9ab0;background:rgba(255,45,85,.12);border:1px solid rgba(255,45,85,.3);
     padding:6px 12px;border-radius:999px;margin-bottom:18px;
   }
+  .hero-tag.done{color:#ffd76a;background:rgba(255,215,106,.12);border-color:rgba(255,215,106,.35)}
   .hero h1{font-size:clamp(30px,5vw,52px);line-height:1.05;margin:0 0 16px;letter-spacing:-1.2px}
   .grad{background:linear-gradient(100deg,#ff2d55,#ff7b3d 45%,#00d4ff);-webkit-background-clip:text;background-clip:text;color:transparent}
   .lead{color:#b6c0d1;font-size:16px;line-height:1.65;max-width:760px;margin:0 0 26px}
@@ -86,6 +87,25 @@
   .stat b{display:block;font-size:26px;letter-spacing:-.5px;
     background:linear-gradient(120deg,#fff,#9fb4d6);-webkit-background-clip:text;background-clip:text;color:transparent}
   .stat span{font-size:12px;color:var(--muted);line-height:1.4;display:block;margin-top:2px}
+
+  /* Champion banner */
+  .champion{
+    display:flex;align-items:center;gap:18px;flex-wrap:wrap;
+    background:linear-gradient(120deg,rgba(255,215,106,.16),rgba(255,45,85,.10) 60%,transparent);
+    border:1px solid rgba(255,215,106,.35);
+    border-radius:20px;padding:22px 24px;margin-bottom:26px;
+    box-shadow:0 20px 60px rgba(255,180,40,.10);
+  }
+  .champion .cup{
+    width:60px;height:60px;border-radius:16px;display:grid;place-items:center;font-size:32px;
+    background:linear-gradient(140deg,#ffd76a,#c08f13);
+    box-shadow:0 12px 30px rgba(255,200,60,.35);flex-shrink:0;
+  }
+  .champion .ch-text{display:flex;flex-direction:column;gap:4px}
+  .champion .ch-text small{font-size:11px;letter-spacing:1.6px;text-transform:uppercase;color:#ffd76a;font-weight:800}
+  .champion .ch-text strong{font-size:22px;letter-spacing:-.3px}
+  .champion .ch-text span{font-size:13.5px;color:var(--muted)}
+
   .card{
     background:var(--card);border:1px solid var(--brd);border-radius:18px;
     padding:22px;margin-bottom:20px;backdrop-filter:blur(8px);
@@ -118,6 +138,7 @@
   .pos.p1{background:linear-gradient(140deg,#ffd76a,#c08f13);color:#241a00;box-shadow:0 0 18px rgba(255,200,60,.3)}
   .pos.p2{background:linear-gradient(140deg,#e3eaf5,#96a6ba);color:#171d26}
   .pos.p3{background:linear-gradient(140deg,#e5a06a,#9c5a27);color:#211000}
+  .pos.dnf{width:auto;padding:0 9px;background:rgba(255,45,85,.18);color:#ff8aa0;border:1px solid rgba(255,45,85,.4);font-size:11px}
   .team{
     display:inline-flex;align-items:center;gap:7px;padding:5px 11px;border-radius:999px;
     font-size:12.5px;font-weight:700;white-space:nowrap;background:var(--tb);color:var(--tt);border:1px solid var(--tbd);
@@ -132,6 +153,7 @@
   .delta.up{color:#33e08a}
   .delta.up i{font-style:normal;font-size:10px;margin-left:3px}
   .delta.flat{color:#5c6675}
+  .delta.dnf{color:#ff8aa0}
   .race{
     background:var(--card);border:1px solid var(--brd);border-radius:18px;
     margin-bottom:18px;overflow:hidden;backdrop-filter:blur(8px);
@@ -160,7 +182,6 @@
     text-align:left;padding:8px 10px;border-bottom:1px solid var(--brd)}
   table.points-table td{padding:9px 10px;border-bottom:1px solid rgba(255,255,255,.05);font-variant-numeric:tabular-nums}
   table.points-table tr:last-child td{border-bottom:none}
-  .tbd{color:var(--muted);font-size:12px;text-align:center}
   .bar{height:7px;border-radius:6px;background:rgba(255,255,255,.07);overflow:hidden;min-width:70px}
   .bar i{display:block;height:100%;border-radius:6px;
     background:linear-gradient(90deg,#ff2d55,#ff7b3d);box-shadow:0 0 14px rgba(255,45,85,.45)}
@@ -172,14 +193,14 @@
   }
   .spa-hero h1{margin:0 0 10px;font-size:clamp(26px,4vw,40px);letter-spacing:-1px}
   .spa-hero .date{color:#ffcf6a;font-weight:800;font-size:15px;letter-spacing:.4px;margin-bottom:18px}
-  .countdown{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px}
-  .cd-box{
-    min-width:86px;text-align:center;background:rgba(0,0,0,.32);border:1px solid var(--brd);
-    border-radius:14px;padding:12px 10px;
+  .spa-winner{
+    display:flex;align-items:center;gap:14px;flex-wrap:wrap;
+    background:rgba(0,0,0,.28);border:1px solid rgba(255,215,106,.3);
+    border-radius:14px;padding:14px 18px;margin-top:6px;
   }
-  .cd-box b{display:block;font-size:26px;font-variant-numeric:tabular-nums;letter-spacing:-.5px}
-  .cd-box span{font-size:10.5px;color:var(--muted);letter-spacing:1.2px;text-transform:uppercase}
-  .cd-done{font-weight:800;color:#33e08a;font-size:16px}
+  .spa-winner .medal{font-size:28px}
+  .spa-winner strong{font-size:16px;letter-spacing:-.2px}
+  .spa-winner span{font-size:12.5px;color:var(--muted);display:block;margin-top:2px}
   .rec-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin-bottom:20px}
   .rec{
     background:var(--card);border:1px solid var(--brd);border-radius:16px;padding:18px;
@@ -229,6 +250,9 @@
     .card,.race{border-radius:14px}
     .hero-stats{grid-template-columns:repeat(2,1fr)}
     .bg-panel{width:min(288px,calc(100vw - 36px))}
+    .champion{padding:16px}
+    .champion .cup{width:48px;height:48px;font-size:26px}
+    .champion .ch-text strong{font-size:18px}
   }
 </style>
 </head>
@@ -260,22 +284,31 @@
 
 <main class="wrap">
 
+  <!-- ================= ГЛАВНАЯ ================= -->
   <section class="page active" data-page="home">
     <div class="hero">
-      <div class="hero-tag">Season 2026 · GTA Online</div>
+      <div class="hero-tag done">Season 2026 · Сезон завершён</div>
       <h1>World Endurance <span class="grad">Championship</span></h1>
       <p class="lead">
-        Чемпионат по гонкам на выносливость в GTA Online. Восемь этапов сезона: четыре спринта
-        по 30 минут, три часовые гонки и одна большая гонка на выносливость длиной 2,4 часа
-        на трассе Spa-Francorchamps.
+        Восемь этапов позади: четыре спринта по 30 минут, три часовые гонки и финальная
+        2,4-часовая гонка на Spa-Francorchamps. Титул чемпиона сезона 2026 разыгран.
       </p>
-      <div class="hero-stats">
-        <div class="stat"><b>4</b><span>гонки по 30 минут</span></div>
-        <div class="stat"><b>3</b><span>часовые гонки</span></div>
-        <div class="stat"><b>1</b><span>гонка 2,4 часа</span></div>
-        <div class="stat"><b>8</b><span>этапов всего</span></div>
-        <div class="stat"><b>4</b><span>команды</span></div>
+    </div>
+
+    <div class="champion">
+      <div class="cup">🏆</div>
+      <div class="ch-text">
+        <small>Чемпион сезона 2026</small>
+        <strong>kastillio <span class="muted" style="font-weight:600">· #1</span></strong>
+        <span>Dewbauchee WEC Team · 169 очков · 5 побед</span>
       </div>
+    </div>
+
+    <div class="hero-stats" style="margin-bottom:26px">
+      <div class="stat"><b>8 / 8</b><span>этапов завершено</span></div>
+      <div class="stat"><b>169</b><span>очков у чемпиона</span></div>
+      <div class="stat"><b>217</b><span>очков у Dewbauchee (кубок)</span></div>
+      <div class="stat"><b>4</b><span>команды в сезоне</span></div>
     </div>
 
     <div class="grid2">
@@ -286,25 +319,25 @@
             <tr><th>Место</th><th>Спринт 30 мин</th><th>Часовая</th><th>2,4 часа</th></tr>
           </thead>
           <tbody>
-            <tr><td>1</td><td>19</td><td>28</td><td class="tbd" rowspan="5">объявим<br>перед Spa</td></tr>
-            <tr><td>2</td><td>15</td><td>23</td></tr>
-            <tr><td>3</td><td>12</td><td>18</td></tr>
-            <tr><td>4</td><td>9</td><td>15</td></tr>
-            <tr><td>5</td><td>6</td><td>—</td></tr>
+            <tr><td>1</td><td>19</td><td>28</td><td>36</td></tr>
+            <tr><td>2</td><td>15</td><td>23</td><td>30</td></tr>
+            <tr><td>3</td><td>12</td><td>18</td><td>24</td></tr>
+            <tr><td>4</td><td>9</td><td>15</td><td>18</td></tr>
+            <tr><td>5</td><td>6</td><td>—</td><td>12</td></tr>
           </tbody>
         </table>
         <p class="muted small" style="margin:14px 0 0">
-          Пилоты, не классифицированные в гонке, очков не получают.
+          Пилоты, не классифицированные (или DNF) в гонке, очков не получают.
         </p>
       </div>
 
       <div class="card">
-        <h2>Формат чемпионата</h2>
+        <h2>Итоги сезона</h2>
         <ul class="list">
-          <li><b>Спринты</b> — 4 гонки по 30 минут. Короткий формат, плотная борьба, максимум 19 очков за победу.</li>
-          <li><b>Часовые гонки</b> — 3 гонки по 60 минут. Больше очков (28 за победу) и больше тактики.</li>
-          <li><b>Гонка на выносливость</b> — 2,4 часа на Spa-Francorchamps, финал сезона 23.10.2026.</li>
-          <li><b>Зачёты</b> — личный зачёт пилотов и кубок конструкторов среди команд.</li>
+          <li><b>Личный зачёт:</b> kastillio — 169 очков, второй Vin_Diselll (127), третий SOVYCH05 (87).</li>
+          <li><b>Кубок конструкторов:</b> Dewbauchee WEC Team — 217 очков.</li>
+          <li><b>Финал в Spa:</b> победа kastillio, Vin_Diselll сошёл (авария) и потерял шансы на титул.</li>
+          <li><b>Зачёты:</b> 7 пилотов набрали очки по ходу сезона, 8 пилотов выходили на старт.</li>
         </ul>
       </div>
     </div>
@@ -314,23 +347,24 @@
       <div class="table-wrap">
         <table class="res calendar">
           <thead>
-            <tr><th>#</th><th>Трасса</th><th>Формат</th><th>Статус</th></tr>
+            <tr><th>#</th><th>Трасса</th><th>Формат</th><th>Победитель</th><th>Статус</th></tr>
           </thead>
           <tbody>
-            <tr><td class="num">1</td><td class="driver">Mugello</td><td>Спринт · 30 мин</td><td><span class="status done">Завершена</span></td></tr>
-            <tr><td class="num">2</td><td class="driver">Suzuka</td><td>Спринт · 30 мин</td><td><span class="status done">Завершена</span></td></tr>
-            <tr><td class="num">3</td><td class="driver">Sochi</td><td>Спринт · 30 мин</td><td><span class="status done">Завершена</span></td></tr>
-            <tr><td class="num">4</td><td class="driver">All in line</td><td>Спринт · 30 мин</td><td><span class="status done">Завершена</span></td></tr>
-            <tr><td class="num">5</td><td class="driver">Paul Ricard</td><td>Часовая гонка</td><td><span class="status done">Завершена</span></td></tr>
-            <tr><td class="num">6</td><td class="driver">SH GP</td><td>Часовая гонка</td><td><span class="status done">Завершена</span></td></tr>
-            <tr><td class="num">7</td><td class="driver">Brazil</td><td>Часовая гонка</td><td><span class="status done">Завершена</span></td></tr>
-            <tr><td class="num">8</td><td class="driver">Spa-Francorchamps</td><td>Выносливость · 2,4 ч</td><td><span class="status next">23.10.2026</span></td></tr>
+            <tr><td class="num">1</td><td class="driver">Mugello</td><td>Спринт · 30 мин</td><td>Vin_Diselll</td><td><span class="status done">Завершена</span></td></tr>
+            <tr><td class="num">2</td><td class="driver">Suzuka</td><td>Спринт · 30 мин</td><td>kastillio</td><td><span class="status done">Завершена</span></td></tr>
+            <tr><td class="num">3</td><td class="driver">Sochi</td><td>Спринт · 30 мин</td><td>Vin_Diselll</td><td><span class="status done">Завершена</span></td></tr>
+            <tr><td class="num">4</td><td class="driver">All in line</td><td>Спринт · 30 мин</td><td>Vin_Diselll</td><td><span class="status done">Завершена</span></td></tr>
+            <tr><td class="num">5</td><td class="driver">Paul Ricard</td><td>Часовая гонка</td><td>kastillio</td><td><span class="status done">Завершена</span></td></tr>
+            <tr><td class="num">6</td><td class="driver">SH GP</td><td>Часовая гонка</td><td>kastillio</td><td><span class="status done">Завершена</span></td></tr>
+            <tr><td class="num">7</td><td class="driver">Brazil</td><td>Часовая гонка</td><td>kastillio</td><td><span class="status done">Завершена</span></td></tr>
+            <tr><td class="num">8</td><td class="driver">Spa-Francorchamps</td><td>Выносливость · 2,4 ч</td><td>kastillio</td><td><span class="status done">Завершена</span></td></tr>
           </tbody>
         </table>
       </div>
     </div>
   </section>
 
+  <!-- ================= СПРИНТЫ ================= -->
   <section class="page" data-page="sprint">
     <div class="page-head">
       <h1>Спринты · 30 минут</h1>
@@ -346,7 +380,7 @@
             <tbody>
               <tr><td><span class="pos p1">1</span></td><td class="driver">Vin_Diselll</td><td class="num">33</td>
                 <td><span class="team atomic">Atomic WEC Team</span></td><td class="pts">19</td><td><span class="delta same">P1 → P1</span></td></tr>
-              <tr><td><span class="pos p2">2</span></td><td class="driver">kastillio</td><td class="num">44</td>
+              <tr><td><span class="pos p2">2</span></td><td class="driver">kastillio</td><td class="num">1</td>
                 <td><span class="team dew">Dewbauchee WEC Team</span></td><td class="pts">15</td><td><span class="delta same">P2 → P2</span></td></tr>
               <tr><td><span class="pos p3">3</span></td><td class="driver">SOVYCH05</td><td class="num">88</td>
                 <td><span class="team atomic">Atomic WEC Team</span></td><td class="pts">12</td><td><span class="delta same">P3 → P3</span></td></tr>
@@ -364,7 +398,7 @@
           <table class="res">
             <thead><tr><th>Поз</th><th>Пилот</th><th>№</th><th>Команда</th><th>Очки</th><th>Старт → Финиш</th></tr></thead>
             <tbody>
-              <tr><td><span class="pos p1">1</span></td><td class="driver">kastillio</td><td class="num">44</td>
+              <tr><td><span class="pos p1">1</span></td><td class="driver">kastillio</td><td class="num">1</td>
                 <td><span class="team dew">Dewbauchee WEC Team</span></td><td class="pts">19</td><td><span class="delta same">P1 → P1</span></td></tr>
             </tbody>
           </table>
@@ -402,7 +436,7 @@
             <tbody>
               <tr><td><span class="pos p1">1</span></td><td class="driver">Vin_Diselll</td><td class="num">33</td>
                 <td><span class="team atomic">Atomic WEC Team</span></td><td class="pts">19</td><td><span class="delta same">P1 → P1</span></td></tr>
-              <tr><td><span class="pos p2">2</span></td><td class="driver">kastillio</td><td class="num">44</td>
+              <tr><td><span class="pos p2">2</span></td><td class="driver">kastillio</td><td class="num">1</td>
                 <td><span class="team dew">Dewbauchee WEC Team</span></td><td class="pts">15</td><td><span class="delta same">P2 → P2</span></td></tr>
               <tr><td><span class="pos p3">3</span></td><td class="driver">SOVYCH05</td><td class="num">88</td>
                 <td><span class="team atomic">Atomic WEC Team</span></td><td class="pts">12</td><td><span class="delta same">P3 → P3</span></td></tr>
@@ -418,6 +452,7 @@
     </div>
   </section>
 
+  <!-- ================= ЧАСОВЫЕ ================= -->
   <section class="page" data-page="hour">
     <div class="page-head">
       <h1>Часовые гонки</h1>
@@ -431,13 +466,13 @@
           <table class="res">
             <thead><tr><th>Поз</th><th>Пилот</th><th>№</th><th>Команда</th><th>Очки</th><th>Старт → Финиш</th></tr></thead>
             <tbody>
-              <tr><td><span class="pos p1">1</span></td><td class="driver">kastillio</td><td class="num">44</td>
+              <tr><td><span class="pos p1">1</span></td><td class="driver">kastillio</td><td class="num">1</td>
                 <td><span class="team dew">Dewbauchee WEC Team</span></td><td class="pts">28</td><td><span class="delta same">P1 → P1</span></td></tr>
               <tr><td><span class="pos p2">2</span></td><td class="driver">Vin_Diselll</td><td class="num">33</td>
                 <td><span class="team atomic">Atomic WEC Team</span></td><td class="pts">23</td><td><span class="delta same">P2 → P2</span></td></tr>
               <tr><td><span class="pos p3">3</span></td><td class="driver">NeMops</td><td class="num">5</td>
                 <td><span class="team benefactor">Benefactor WEC Team</span></td><td class="pts">18</td><td><span class="delta up">P4 → P3 <i>▲</i></span></td></tr>
-              <tr><td><span class="pos">4</span></td><td class="driver">overshadower</td><td class="num">—</td>
+              <tr><td><span class="pos">4</span></td><td class="driver">overshadower</td><td class="num">14</td>
                 <td><span class="team benefactor">Benefactor WEC Team</span></td><td class="pts">15</td><td><span class="delta flat">—</span></td></tr>
             </tbody>
           </table>
@@ -453,7 +488,7 @@
           <table class="res">
             <thead><tr><th>Поз</th><th>Пилот</th><th>№</th><th>Команда</th><th>Очки</th><th>Старт → Финиш</th></tr></thead>
             <tbody>
-              <tr><td><span class="pos p1">1</span></td><td class="driver">kastillio</td><td class="num">44</td>
+              <tr><td><span class="pos p1">1</span></td><td class="driver">kastillio</td><td class="num">1</td>
                 <td><span class="team dew">Dewbauchee WEC Team</span></td><td class="pts">28</td><td><span class="delta same">P1 → P1</span></td></tr>
               <tr><td><span class="pos p2">2</span></td><td class="driver">Vin_Diselll</td><td class="num">33</td>
                 <td><span class="team atomic">Atomic WEC Team</span></td><td class="pts">23</td><td><span class="delta same">P2 → P2</span></td></tr>
@@ -471,13 +506,13 @@
           <table class="res">
             <thead><tr><th>Поз</th><th>Пилот</th><th>№</th><th>Команда</th><th>Очки</th><th>Старт → Финиш</th></tr></thead>
             <tbody>
-              <tr><td><span class="pos p1">1</span></td><td class="driver">kastillio</td><td class="num">44</td>
+              <tr><td><span class="pos p1">1</span></td><td class="driver">kastillio</td><td class="num">1</td>
                 <td><span class="team dew">Dewbauchee WEC Team</span></td><td class="pts">28</td><td><span class="delta same">P1 → P1</span></td></tr>
               <tr><td><span class="pos p2">2</span></td><td class="driver">Vin_Diselll</td><td class="num">33</td>
                 <td><span class="team atomic">Atomic WEC Team</span></td><td class="pts">23</td><td><span class="delta same">P2 → P2</span></td></tr>
               <tr><td><span class="pos p3">3</span></td><td class="driver">SOVYCH05</td><td class="num">88</td>
                 <td><span class="team dew">Dewbauchee WEC Team</span></td><td class="pts">18</td><td><span class="delta up">P4 → P3 <i>▲</i></span></td></tr>
-              <tr><td><span class="pos">4</span></td><td class="driver">overshadower</td><td class="num">—</td>
+              <tr><td><span class="pos">4</span></td><td class="driver">overshadower</td><td class="num">14</td>
                 <td><span class="team benefactor">Benefactor WEC Team</span></td><td class="pts">15</td><td><span class="delta up">P5 → P4 <i>▲</i></span></td></tr>
             </tbody>
           </table>
@@ -487,28 +522,45 @@
     </div>
   </section>
 
+  <!-- ================= SPA ================= -->
   <section class="page" data-page="spa">
     <div class="spa-hero">
-      <div class="hero-tag">Финал сезона · 2,4 часа</div>
+      <div class="hero-tag done">Финал сезона · Завершена</div>
       <h1>Spa-Francorchamps</h1>
-      <div class="date">23.10.2026</div>
-      <p class="lead" style="margin-bottom:20px">
-        Главная гонка сезона — 2 часа 24 минуты на легендарном Spa-Francorchamps.
-        Максимальное количество очков в чемпионате и последняя возможность изменить расклад в зачётах.
+      <div class="date">23.10.2026 · 2 часа 24 минуты</div>
+      <p class="lead" style="margin-bottom:16px">
+        Финальная гонка сезона на легендарном Spa-Francorchamps. Победа kastillio сделала его
+        чемпионом сезона 2026. Vin_Diselll разбился и потерял все шансы на титул.
       </p>
-      <div class="countdown" id="countdown">
-        <div class="cd-box"><b id="cd-d">—</b><span>дней</span></div>
-        <div class="cd-box"><b id="cd-h">—</b><span>часов</span></div>
-        <div class="cd-box"><b id="cd-m">—</b><span>минут</span></div>
-        <div class="cd-box"><b id="cd-s">—</b><span>секунд</span></div>
+      <div class="spa-winner">
+        <div class="medal">🏆</div>
+        <div>
+          <strong>Победитель гонки · kastillio (#1)</strong>
+          <span>Dewbauchee WEC Team · 36 очков · P2 → P1</span>
+        </div>
       </div>
     </div>
 
-    <div class="card">
-      <h2>Результаты</h2>
-      <p class="muted" style="margin:0">
-        Гонка ещё не проведена. Результаты и очки будут добавлены после финиша 23.10.2026.
-      </p>
+    <div class="race">
+      <div class="race-head"><h3>Результаты гонки</h3><span class="badge">2,4 часа</span></div>
+      <div class="race-body">
+        <div class="table-wrap">
+          <table class="res">
+            <thead><tr><th>Поз</th><th>Пилот</th><th>№</th><th>Команда</th><th>Очки</th><th>Старт → Финиш</th></tr></thead>
+            <tbody>
+              <tr><td><span class="pos p1">1</span></td><td class="driver">kastillio</td><td class="num">1</td>
+                <td><span class="team dew">Dewbauchee WEC Team</span></td><td class="pts">36</td><td><span class="delta up">P2 → P1 <i>▲</i></span></td></tr>
+              <tr><td><span class="pos p2">2</span></td><td class="driver">SOVYCH05</td><td class="num">88</td>
+                <td><span class="team dew">Dewbauchee WEC Team</span></td><td class="pts">30</td><td><span class="delta up">P3 → P2 <i>▲</i></span></td></tr>
+              <tr><td><span class="pos p3">3</span></td><td class="driver">fan_jojo</td><td class="num">35</td>
+                <td><span class="team benefactor">Benefactor WEC Team</span></td><td class="pts">24</td><td><span class="delta up">P4 → P3 <i>▲</i></span></td></tr>
+              <tr><td><span class="pos dnf">DNF</span></td><td class="driver">Vin_Diselll</td><td class="num">33</td>
+                <td><span class="team atomic">Atomic WEC Team</span></td><td class="pts">—</td><td><span class="delta dnf">Разбился</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="nc">Vin_Diselll сошёл с дистанции после аварии и потерял все шансы на чемпионство</div>
+      </div>
     </div>
 
     <div class="grid2">
@@ -522,84 +574,94 @@
         </ul>
       </div>
       <div class="card">
-        <h2>Очки за гонку</h2>
+        <h2>Ключевой момент сезона</h2>
         <p class="muted" style="margin:0 0 12px">
-          Начисление очков за гонку 2,4 часа будет объявлено перед стартом.
-          Они станут решающими в борьбе за титул.
+          Перед Spa отрыв kastillio от Vin_Diselll составлял всего 7 очков — титул решался
+          в финальной гонке.
         </p>
-        <p class="muted small" style="margin:0">Отрыв лидера личного зачёта перед Spa — всего 7 очков.</p>
+        <p class="muted small" style="margin:0">
+          Авария Vin_Diselll и победа kastillio сделали исход чемпионской гонки однозначным.
+        </p>
       </div>
     </div>
   </section>
 
+  <!-- ================= ЛИЧНЫЙ ЗАЧЁТ ================= -->
   <section class="page" data-page="drivers">
     <div class="page-head">
       <h1>Личный зачёт</h1>
-      <p>Положение пилотов после семи этапов сезона.</p>
+      <p>Итоговое положение пилотов по завершении сезона 2026.</p>
     </div>
+
     <div class="card">
       <div class="table-wrap">
         <table class="res">
           <thead><tr><th>Поз</th><th>Пилот</th><th>№</th><th>Команда</th><th>Очки</th><th style="min-width:130px">Прогресс</th></tr></thead>
           <tbody>
-            <tr><td><span class="pos p1">1</span></td><td class="driver">kastillio</td><td class="num">44</td>
-              <td><span class="team dew">Dewbauchee WEC Team</span></td><td class="pts-big">133</td>
+            <tr><td><span class="pos p1">1</span></td><td class="driver">kastillio 🏆</td><td class="num">1</td>
+              <td><span class="team dew">Dewbauchee WEC Team</span></td><td class="pts-big">169</td>
               <td><div class="bar"><i style="width:100%"></i></div></td></tr>
             <tr><td><span class="pos p2">2</span></td><td class="driver">Vin_Diselll</td><td class="num">33</td>
-              <td><span class="team atomic">Atomic WEC Team</span></td><td class="pts-big">126</td>
-              <td><div class="bar"><i style="width:94.7%"></i></div></td></tr>
+              <td><span class="team atomic">Atomic WEC Team</span></td><td class="pts-big">127</td>
+              <td><div class="bar blue"><i style="width:75.1%"></i></div></td></tr>
             <tr><td><span class="pos p3">3</span></td><td class="driver">SOVYCH05</td><td class="num">88</td>
-              <td><span class="team dew">Dewbauchee WEC Team</span></td><td class="pts-big">57</td>
-              <td><div class="bar"><i style="width:42.9%"></i></div></td></tr>
-            <tr><td><span class="pos">4</span></td><td class="driver">overshadower</td><td class="num">—</td>
+              <td><span class="team dew">Dewbauchee WEC Team</span></td><td class="pts-big">87</td>
+              <td><div class="bar"><i style="width:51.5%"></i></div></td></tr>
+            <tr><td><span class="pos">4</span></td><td class="driver">overshadower</td><td class="num">14</td>
               <td><span class="team benefactor">Benefactor WEC Team</span></td><td class="pts-big">30</td>
-              <td><div class="bar"><i style="width:22.6%"></i></div></td></tr>
-            <tr><td><span class="pos">5</span></td><td class="driver">JOSYLVIO</td><td class="num">49</td>
+              <td><div class="bar blue"><i style="width:17.8%"></i></div></td></tr>
+            <tr><td><span class="pos">5</span></td><td class="driver">fan_jojo</td><td class="num">35</td>
+              <td><span class="team benefactor">Benefactor WEC Team</span></td><td class="pts-big">24</td>
+              <td><div class="bar blue"><i style="width:14.2%"></i></div></td></tr>
+            <tr><td><span class="pos">6</span></td><td class="driver">JOSYLVIO</td><td class="num">49</td>
               <td><span class="team grotti">Grotti WEC Team</span></td><td class="pts-big">21</td>
-              <td><div class="bar"><i style="width:15.8%"></i></div></td></tr>
-            <tr><td><span class="pos">6</span></td><td class="driver">NeMops</td><td class="num">5</td>
+              <td><div class="bar"><i style="width:12.4%"></i></div></td></tr>
+            <tr><td><span class="pos">7</span></td><td class="driver">NeMops</td><td class="num">5</td>
               <td><span class="team benefactor">Benefactor WEC Team</span></td><td class="pts-big">12</td>
-              <td><div class="bar"><i style="width:9%"></i></div></td></tr>
-            <tr><td><span class="pos">7</span></td><td class="driver">femtuza</td><td class="num">11</td>
+              <td><div class="bar blue"><i style="width:7.1%"></i></div></td></tr>
+            <tr><td><span class="pos">8</span></td><td class="driver">femtuza</td><td class="num">11</td>
               <td><span class="team grotti">Grotti WEC Team</span></td><td class="pts-big">6</td>
-              <td><div class="bar"><i style="width:4.5%"></i></div></td></tr>
+              <td><div class="bar"><i style="width:3.6%"></i></div></td></tr>
           </tbody>
         </table>
       </div>
     </div>
   </section>
 
+  <!-- ================= КУБОК КОНСТРУКТОРОВ ================= -->
   <section class="page" data-page="teams">
     <div class="page-head">
       <h1>Кубок конструкторов</h1>
-      <p>Сумма очков всех пилотов команды по итогам семи этапов.</p>
+      <p>Итоговое положение команд по завершении сезона 2026.</p>
     </div>
+
     <div class="card">
       <div class="table-wrap">
         <table class="res">
           <thead><tr><th>Поз</th><th>Команда</th><th>Очки</th><th style="min-width:130px">Прогресс</th></tr></thead>
           <tbody>
-            <tr><td><span class="pos p1">1</span></td><td><span class="team atomic">Atomic WEC Team</span></td>
-              <td class="pts-big">165</td><td><div class="bar blue"><i style="width:100%"></i></div></td></tr>
-            <tr><td><span class="pos p2">2</span></td><td><span class="team dew">Dewbauchee WEC Team</span></td>
-              <td class="pts-big">151</td><td><div class="bar"><i style="width:91.5%"></i></div></td></tr>
+            <tr><td><span class="pos p1">1</span></td><td><span class="team dew">Dewbauchee WEC Team</span></td>
+              <td class="pts-big">217</td><td><div class="bar"><i style="width:100%"></i></div></td></tr>
+            <tr><td><span class="pos p2">2</span></td><td><span class="team atomic">Atomic WEC Team</span></td>
+              <td class="pts-big">166</td><td><div class="bar blue"><i style="width:76.5%"></i></div></td></tr>
             <tr><td><span class="pos p3">3</span></td><td><span class="team benefactor">Benefactor WEC Team</span></td>
-              <td class="pts-big">42</td><td><div class="bar blue"><i style="width:25.5%"></i></div></td></tr>
+              <td class="pts-big">66</td><td><div class="bar blue"><i style="width:30.4%"></i></div></td></tr>
             <tr><td><span class="pos">4</span></td><td><span class="team grotti">Grotti WEC Team</span></td>
-              <td class="pts-big">27</td><td><div class="bar"><i style="width:16.4%"></i></div></td></tr>
+              <td class="pts-big">27</td><td><div class="bar"><i style="width:12.4%"></i></div></td></tr>
           </tbody>
         </table>
       </div>
     </div>
+
     <div class="card">
       <h2>Составы команд</h2>
       <div class="table-wrap">
         <table class="res">
-          <thead><tr><th>Команда</th><th>Пилоты</th><th>Очки</th></tr></thead>
+          <thead><tr><th>Команда</th><th>Пилоты</th><th>Очки в кубке</th></tr></thead>
           <tbody>
-            <tr><td><span class="team atomic">Atomic WEC Team</span></td><td>Vin_Diselll (33), SOVYCH05 (88)</td><td class="pts">165</td></tr>
-            <tr><td><span class="team dew">Dewbauchee WEC Team</span></td><td>kastillio (44), SOVYCH05 (88)</td><td class="pts">151</td></tr>
-            <tr><td><span class="team benefactor">Benefactor WEC Team</span></td><td>NeMops (5), overshadower</td><td class="pts">42</td></tr>
+            <tr><td><span class="team dew">Dewbauchee WEC Team</span></td><td>kastillio (1), SOVYCH05 (88)</td><td class="pts">217</td></tr>
+            <tr><td><span class="team atomic">Atomic WEC Team</span></td><td>Vin_Diselll (33)</td><td class="pts">166</td></tr>
+            <tr><td><span class="team benefactor">Benefactor WEC Team</span></td><td>overshadower (14), fan_jojo (35), NeMops (5)</td><td class="pts">66</td></tr>
             <tr><td><span class="team grotti">Grotti WEC Team</span></td><td>JOSYLVIO (49), femtuza (11)</td><td class="pts">27</td></tr>
           </tbody>
         </table>
@@ -607,19 +669,20 @@
     </div>
   </section>
 
+  <!-- ================= РЕКОРДЫ ================= -->
   <section class="page" data-page="records">
     <div class="page-head">
       <h1>Рекорды сезона</h1>
-      <p>Статистика и достижения по итогам семи прошедших этапов.</p>
+      <p>Итоговая статистика и достижения сезона 2026.</p>
     </div>
 
     <div class="rec-grid">
-      <div class="rec"><div class="k">Больше всего побед</div><div class="v">kastillio</div><div class="s">4 победы · Suzuka, Paul Ricard, SH GP, Brazil</div></div>
-      <div class="rec"><div class="k">Больше всего подиумов</div><div class="v">Vin_Diselll · kastillio</div><div class="s">по 6 подиумов у каждого</div></div>
-      <div class="rec"><div class="k">Максимум очков за гонку</div><div class="v">28 очков</div><div class="s">kastillio — трижды в часовых гонках</div></div>
+      <div class="rec"><div class="k">Больше всего побед</div><div class="v">kastillio</div><div class="s">5 побед · Suzuka, Paul Ricard, SH GP, Brazil, Spa</div></div>
+      <div class="rec"><div class="k">Больше всего подиумов</div><div class="v">kastillio</div><div class="s">7 подиумов из 8 гонок</div></div>
+      <div class="rec"><div class="k">Максимум очков за гонку</div><div class="v">36 очков</div><div class="s">kastillio — победа в Spa (2,4 ч)</div></div>
       <div class="rec"><div class="k">Самая длинная серия побед</div><div class="v">3 гонки</div><div class="s">kastillio: Paul Ricard → SH GP → Brazil</div></div>
-      <div class="rec"><div class="k">Лучший прорыв в гонке</div><div class="v">+1 позиция</div><div class="s">NeMops, SOVYCH05, JOSYLVIO, overshadower</div></div>
-      <div class="rec"><div class="k">Лидер по очкам</div><div class="v">133 очка</div><div class="s">kastillio — лидер личного зачёта</div></div>
+      <div class="rec"><div class="k">Чемпион сезона</div><div class="v">kastillio 🏆</div><div class="s">169 очков · отрыв 42 очка от второго места</div></div>
+      <div class="rec"><div class="k">Победитель кубка конструкторов</div><div class="v">Dewbauchee</div><div class="s">217 очков · отрыв 51 очко от Atomic</div></div>
     </div>
 
     <div class="card">
@@ -628,10 +691,11 @@
         <table class="res">
           <thead><tr><th>Пилот</th><th>Победы</th><th>Подиумы</th><th>Финиши в очках</th><th>Лучший финиш</th><th>Очки</th></tr></thead>
           <tbody>
-            <tr><td class="driver">kastillio</td><td class="pts">4</td><td class="pts">6</td><td class="pts">6</td><td class="pts">P1</td><td class="pts">133</td></tr>
-            <tr><td class="driver">Vin_Diselll</td><td class="pts">3</td><td class="pts">6</td><td class="pts">6</td><td class="pts">P1</td><td class="pts">126</td></tr>
-            <tr><td class="driver">SOVYCH05</td><td class="pts">0</td><td class="pts">4</td><td class="pts">4</td><td class="pts">P2</td><td class="pts">57</td></tr>
+            <tr><td class="driver">kastillio</td><td class="pts">5</td><td class="pts">7</td><td class="pts">7</td><td class="pts">P1</td><td class="pts">169</td></tr>
+            <tr><td class="driver">Vin_Diselll</td><td class="pts">3</td><td class="pts">6</td><td class="pts">6</td><td class="pts">P1</td><td class="pts">127</td></tr>
+            <tr><td class="driver">SOVYCH05</td><td class="pts">0</td><td class="pts">5</td><td class="pts">5</td><td class="pts">P2</td><td class="pts">87</td></tr>
             <tr><td class="driver">overshadower</td><td class="pts">0</td><td class="pts">0</td><td class="pts">2</td><td class="pts">P4</td><td class="pts">30</td></tr>
+            <tr><td class="driver">fan_jojo</td><td class="pts">0</td><td class="pts">1</td><td class="pts">1</td><td class="pts">P3</td><td class="pts">24</td></tr>
             <tr><td class="driver">JOSYLVIO</td><td class="pts">0</td><td class="pts">1</td><td class="pts">1</td><td class="pts">P3</td><td class="pts">21</td></tr>
             <tr><td class="driver">NeMops</td><td class="pts">0</td><td class="pts">1</td><td class="pts">1</td><td class="pts">P3</td><td class="pts">12</td></tr>
             <tr><td class="driver">femtuza</td><td class="pts">0</td><td class="pts">0</td><td class="pts">1</td><td class="pts">P5</td><td class="pts">6</td></tr>
@@ -653,7 +717,7 @@
             <tr><td class="driver">Paul Ricard</td><td>kastillio</td><td><span class="team dew">Dewbauchee WEC Team</span></td><td class="pts">1:56.508</td></tr>
             <tr><td class="driver">SH GP</td><td>kastillio</td><td><span class="team dew">Dewbauchee WEC Team</span></td><td class="pts">1:44.190</td></tr>
             <tr><td class="driver">Brazil</td><td>kastillio</td><td><span class="team dew">Dewbauchee WEC Team</span></td><td class="pts">1:39.774</td></tr>
-            <tr><td class="driver">Spa-Francorchamps</td><td class="muted">—</td><td class="muted">—</td><td class="muted">23.10.2026</td></tr>
+            <tr><td class="driver">Spa-Francorchamps</td><td>kastillio</td><td><span class="team dew">Dewbauchee WEC Team</span></td><td class="pts">2:16.508</td></tr>
           </tbody>
         </table>
       </div>
@@ -688,26 +752,26 @@
      ============================================================
      Впиши сюда путь к фото. Три варианта:
 
-     1) Фото лежит рядом с HTML-файлом в папке "photos":
+     1) Фото рядом с HTML-файлом в папке "photos":
         home: 'photos/home.jpg'
 
-     2) Фото загружено в интернет (например, на imgur / GitHub):
+     2) Фото в интернете:
         home: 'https://example.com/home.jpg'
 
-     3) Фото вшито прямо в код как base64 data URL:
+     3) Фото как base64 data URL:
         home: 'data:image/jpeg;base64,/9j/4AAQSkZJRg...'
 
-     Оставь пустую строку '' — тогда на этой вкладке фона не будет.
      Ключи: home, sprint, hour, spa, drivers, teams, records.
+     Пустая строка '' — на этой вкладке фона нет.
      ============================================================ */
   const DEFAULT_BACKGROUNDS = {
-    home:    'wec1.jpg',   // например: 'photos/home.jpg'
-    sprint:  'wec30min.jpg',   // например: 'photos/sprint.jpg'
-    hour:    'wec1hour.jpg',   // например: 'photos/hour.jpg'
-    spa:     'wec2hor.jpg',   // например: 'photos/spa.jpg'
-    drivers: 'wec2.jpg',   // например: 'photos/drivers.jpg'
-    teams:   'wec3.jpg',   // например: 'photos/teams.jpg'
-    records: ''    // например: 'photos/records.jpg'
+    home:    'wec1',
+    sprint:  'wec2',
+    hour:    'wec3',
+    spa:     'wec2hor',
+    drivers: 'wec1h',
+    teams:   'wec30min',
+    records: ''
   };
 
   /* ---------- навигация ---------- */
@@ -740,7 +804,6 @@
   const bgReset  = document.getElementById('bgReset');
 
   function getBgFor(name){
-    // приоритет: личный фон > фон из кода
     if (bgStore[name]) return bgStore[name];
     if (DEFAULT_BACKGROUNDS[name]) return DEFAULT_BACKGROUNDS[name];
     return '';
@@ -756,7 +819,6 @@
       bgLayer.classList.remove('on');
     }
     bgName.textContent = pageNames[name] || name;
-    // кнопка сброса активна, если есть личный фон, который можно сбросить
     bgReset.disabled = !bgStore[name];
   }
 
@@ -819,28 +881,6 @@
     saveStore();
     applyBg(currentPage);
   });
-
-  /* ---------- обратный отсчёт до Spa ---------- */
-  const raceDate = new Date('2026-10-23T19:00:00+03:00');
-  const cdD = document.getElementById('cd-d');
-  const cdH = document.getElementById('cd-h');
-  const cdM = document.getElementById('cd-m');
-  const cdS = document.getElementById('cd-s');
-  const cdWrap = document.getElementById('countdown');
-
-  function tick(){
-    const diff = raceDate.getTime() - Date.now();
-    if (diff <= 0){
-      cdWrap.innerHTML = '<div class="cd-done">Гонка стартовала / завершена</div>';
-      return;
-    }
-    cdD.textContent = Math.floor(diff / 86400000);
-    cdH.textContent = Math.floor(diff / 3600000) % 24;
-    cdM.textContent = Math.floor(diff / 60000) % 60;
-    cdS.textContent = Math.floor(diff / 1000) % 60;
-  }
-  tick();
-  setInterval(tick, 1000);
 
   applyBg('home');
 })();
